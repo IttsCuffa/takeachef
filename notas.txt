@@ -1,0 +1,5 @@
+Lunes 16 mayo---Facundo Rios
+
+->Le agregue un contenedor a ".login-box" debido a la especificidad y la cascada que tendria a la hora de trabajar en archivos independientes y le hice su correspondientes cambios para que no haya problemas.
+->Le agregue un border-radius al ".login-box" 
+->Le agregue una clase a la imagen que tenia la clase avatar ,sentia que era lo mejor ya que use una imagen con fondo transparente(es decir lo podemos poner con cualquier color)

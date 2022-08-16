@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receta</title>
+      <!--Font awesome-->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
+      <!--Google fonts-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+      <!--Hoja de estilo-->
+      <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!--Menu desktop-->
+        <div class="menu">
+            <div class="contenedor-menu">
+                <div class="logo">
+                    <a href="./index.html"> <img src="./img/logo-sinbg-horizontal.png" alt="logo-marca"></a>
+                   
+                </div>
+                <div class="menu-links">
+                    <nav>
+                        <ul>
+                            <li><a href="./index.html">Inicio</a></li>
+                            <li><a href="./receta.html">Recetas</a></li>
+                            <li><a href="./chef/index.php">Chef</a></li>
+                            <li><a href="./index.html">Productos</a></li>
+                            <li><a href="./catering/index.php">Catering</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                 <!--Btn registro-->
+                 <div class="header-registro">
+                    <a href="./login.html"><input type="button" class="btn-registro-header-desktop" value="Iniciar sesion"></a>  
+                  </div>
+            </div>
+            
+        </div>
+        <!--Menu-mobile-->
+        <div class="menu-mobile ">
+            <div class="menu-abrir-cerrar">
+                <!--Para que el logo y el icono esten centados-->
+                <div class="header contenedor">
+                   <!--Btn registro-->
+                   <div class="header-registro">
+                      <a href="./login.html">
+                        <input type="button" class="btn-registro-header" value="Iniciar Sesion">
+                      </a> 
+                   </div>
+                    <!--logo-->
+                    <a href="./index.html" class="logo">
+                        <img src="./img/logo-chef-sin-BG2.png" alt="logo-mobile">
+                    </a>
+                    <!--Icono hamburguesa-->
+                    <a href="#" id="btn-open-close">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </div>
+                <!--Con js cerramos el menu dinamicamente-->
+               <div  class="menu-mobile-closed" id="menu-mobile-links">
+                <!--Fondo oscuro-->
+                <div class="background-black">            
+                </div>
+                <nav class="menu-nav" id="menu-nav">
+                    <ul>
+                        <li><a href="./index.html">Inicio</a></li>
+                        <li><a href="./receta.html">Recetas</a></li>
+                        <li><a href="./chef/index.php">Chef </a></li>
+                        <li><a href="./index.html">Productos</a></li>
+                        <li><a href="./catering/index.php">Catering</a></li>
+                    </ul>
+                    <!--Contenedor redes-->
+                    <div class="container-redes">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </nav>
+
+               </div> 
+            </div>
+        </div>
+    </header>
+    <main class="contenedor">
+        
+        <div class="container-receta" id="ensalada">
+        
+            <img src="./img/ensalada-belen.jpg" alt="">
+            
+            <div class="info-receta">
+                <h2>Ensalada Belen</h2>
+                <div class="container-datos-receta">
+                    
+                    <div class="datos">   
+                         <i class="fa-solid fa-clock"></i>
+                         <p>80 min</p>
+                     </div>
+                    <div class="datos">
+                        <i class="fa-solid fa-user"></i>
+                         <p>3 </p>
+                    </div>
+                   
+                    <div class="datos">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <p>Medio</p>
+                    </div>
+                </div>
+                <div class="ingredientes">
+                    <h2>Ingredientes</h2>
+                    <ul>
+                        <li>Berenjena - 4 UN</li>
+                        <li>Morron amarillo - 1 UN</li>
+                        <li>Morron rojo - 2 UN</li>
+                        <li>Aceite de oliva - C/N</li>
+                        <li>Vinagre de vino - C/N</li>
+                        <li>Miel - C/N</li>
+                        <li>Pasa de uva rubia - 100 GR</li>
+                        <li>Vino blanco - 100 CC</li>
+                        <li>Castaña de cajú - 100 GR</li>
+                    </ul>
+                </div>
+                <div class="procedimiento">
+                    <h2>Preparación</h2>
+                    <ul>
+                        <li>Macerar las pasas en vino blanco 24 horas</li>
+                        <li>Cortar berenjenas y morrones en cubos de 2cm x 2cm</li>
+                        <li>Hornearlas con aceite hasta que esten doradas</li>
+                        <li>Tostar las castañas</li>
+                        <li>Hidratar las paas de uva en vino blanco,escurrir.</li>
+                        <li>Unir todos los ingredientes</li>
+                        <li>Armar la ensalada</li>
+                        <li>Condimentar con una vinagreta a base de una parte de vinagre,tres partes de aceite de oliva,sal ,pimienta,y miel a gusto</li>
+                        <br><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-receta" id="milanesa">
+        
+            <img src="./img/mila.jpg" alt="">
+            
+            <div class="info-receta">
+                <h2>Milanesa de Pollo a la Casanova</h2>
+                <div class="container-datos-receta">
+                    
+                    <div class="datos">   
+                         <i class="fa-solid fa-clock"></i>
+                         <p>60 min</p>
+                     </div>
+                    <div class="datos">
+                        <i class="fa-solid fa-user"></i>
+                         <p>8 </p>
+                    </div>
+                   
+                    <div class="datos">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <p>Dificil</p>
+                    </div>
+                </div>
+                <div class="ingredientes">
+                    <h2>Ingredientes</h2>
+                    <ul>
+                        <li>Aceite de oliva - 50 CC</li>
+                        <li>Ajo brunoise - 50 GR</li>
+                        <li>Inglesa para empanar - 200 CC</li>
+                        <li>Jamón cocido en brunoise - 200 GR</li>
+                        <li>Pan rallado - 400 GR</li>
+                        <li>Pata y muslo de pollo - 4 UN</li>
+                        <li>Perejil picado - 20 GR</li>
+                    </ul>
+                    <br><br>
+                </div>
+                <div class="procedimiento">
+                    <h2>Preparación</h2>
+                    <ul>
+                        <li>Deshuesar y emparejar los muslos (4 u x 250 gr).</li>
+                        <li>Mezclar el pan rallado, el jamón picado, el ajo picado y el perejil picado.</li>
+                        <li>Pasar los muslos por la inglesa y empanarlos con la mezcla anterior.</li>
+                        <li>Cocinar en horno a 180ºC rociados con aceite de oliva.</li>
+                        <br><br><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-receta" id="sopa">
+            <img src="./img/sopa.jpg" alt="sopa-img">
+            
+            <div class="info-receta">
+                <h2>Sopa de Zapallo y Endinias</h2>
+                <div class="container-datos-receta">
+                    
+                    <div class="datos">   
+                         <i class="fa-solid fa-clock"></i>
+                         <p>40 min</p>
+                     </div>
+                    <div class="datos">
+                        <i class="fa-solid fa-user"></i>
+                         <p>3 </p>
+                    </div>
+                   
+                    <div class="datos">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <p>Medio</p>
+                    </div>
+                </div>
+                <div class="ingredientes">
+                    <h2>Ingredientes</h2>
+                    <ul>
+                        <li>Manteca - C/N</li>
+                        <li>Vermouth seco - 25 CC</li>
+                        <li>Aceite de girasol - C/N</li>
+                        <li>Zapallo anco en matignon - 750 GR</li>
+                        <li>Caldo corto - 500 CC</li>
+                        <li>Crema de leche - 200 CC</li>
+                        <li>Endivia ciselada - 200 GR</li>
+                        <li>Azúcar - 50 GR</li>
+                        <li>Pimienta negra molida - C/N</li>
+                        <li>Semilla de calabaza - 20 GR</li>
+                    </ul>
+                </div>
+                <div class="procedimiento">
+                    <h2>Preparacion</h2>
+                    <ul>
+                        <li>Saltear el zapallo en aceite, agregar el caldo y cocinar.</li>
+                        <li>Espumar.</li>
+                        <li>Una vez cocido procesar, llevar a fuego e incorporar la crema.</li>
+                        <li>Cocinar 5 minutos más.</li>
+                        <li>Condimentar.</li>
+                        <li>Saltear las endibias en aceite, condimentar con sal y azúcar.</li>
+                        <li>Desglasar con vermouth y unir con la preparación de zapallo.</li>
+                        <li>Tostar las semillas de calabaza e incorporar a la sopa.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+     
+           
+        <div class="container-receta" id="huevo">
+        
+            <img src="./img/huevos.jpg" alt="">
+            
+            <div class="info-receta">
+                <h1>Huevos Benedictinos</h1>
+                <div class="container-datos-receta">
+                    
+                    <div class="datos">   
+                         <i class="fa-solid fa-clock"></i>
+                         <p>25 min</p>
+                     </div>
+                    <div class="datos">
+                        <i class="fa-solid fa-user"></i>
+                         <p>2 </p>
+                    </div>
+                   
+                    <div class="datos">
+                        <i class="fa-solid fa-face-smile"></i>
+                        <p>Fácil</p>
+                    </div>
+                </div>
+                <div class="ingredientes">
+                    <h2>Ingredientes</h2>
+                    <ul>
+                        <li>Huevo poché - 4 UN</li>
+                        <li>Jamón cocido - 100 GR</li>
+                        <li>Manteca - 50 GR</li>
+                        <li>Pan Brioche - 150 GR</li>
+                        <li>Salsa Holandesa - 400 CC</li>
+                    </ul>
+                    <br><br><br>
+                </div>
+                <div class="procedimiento">
+                    <h2>Preparacion</h2>
+                    <ul>
+                        <li>Cortar el pan en rodajas y tostarlo en manteca.</li>
+                        <li>Disponer en cada rodaja una feta de jamón y sobre este un huevo poché.</li>
+                        <li>Salsear con la salsa holandesa.</li>
+                    </ul>
+                    <br><br><br>
+                </div>
+            </div>
+        </div>
+
+           <!---Container logo wpp-->
+         <div class="contenedor-wpp">
+         <!--https://api.whatsapp.com/send?phone=numero&text=mensaje-->
+             <a href="https://api.whatsapp.com/send?phone=numero&text=mensaje" target="_blank">
+            <img src="./img/whatsapp-logo.png" alt="Logo-whatsapp">
+              </a>
+            </div>   
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="container-footer">
+            <div class="logo-footer">
+             <a href="#"> <img src="./img/logo-sinbg-horizontal.png" alt=""></a>  
+            </div>
+            <div class="container-redes-footer">
+                
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="copyright">
+            <hr> 
+            <p>Copyright ©2022 <b>Take-a-chef</b></p>
+        </div>
+    </footer>
+      <!-- Scripts Carrito Marca Propia -->
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+<script src="./script/index.js"></script>
+</body>
+      
+</html>

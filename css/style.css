@@ -1,0 +1,1216 @@
+
+
+
+/**Variables css -Custom Properties***/
+:root{
+  --color-principal:#07404B;
+  --color-fondo:#EFEAE2;
+  --color-barra-lateral:#f3f4f5;
+  --color-negro:#000000;
+  --border-enlaces:#B9B5AD;
+  --border-buscador:#62868D;
+ --color-complementario:#4B1207;
+  
+}
+
+*{
+  font-size: 16px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+
+
+body{
+  font-family:'Poppins', sans-serif;
+  line-height: 1.5;
+  background-color: var(--color-fondo);
+  /**sticky footer*/
+  display: flex;
+  flex-direction: column;
+ min-height: 100vh;
+
+}
+main{
+  flex-grow: 1;
+}
+/******Enlaces*******/
+a{
+  color: #000000;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.2s ease-in-out;
+ 
+}
+a:hover{
+  color: var(--color-principal); 
+  
+}
+h1{
+  font-family:'Poppins', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px;
+}
+h2{
+  font-family:'Poppins', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+}
+  #h3{
+    font-family:'Poppins', sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+    color:var(--color-negro);
+}
+.h2-menu{
+  font-family:'Poppins', sans-serif;
+  font-size: 2.0rem;
+  text-align: center;
+}
+/*Medida estandar de los monitores*/
+.contenedor{
+  width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  
+}
+
+span{
+  font-family:'Poppins', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 20px;
+}
+
+/********Home-Pantalla principal*********************/
+
+/***Menu desktop***/
+.menu{
+  display: none;
+}
+.contenedor-menu{
+  text-align: center;
+  display: flex;
+  justify-content:space-evenly;
+  margin: 50px auto 0 auto;
+  align-items: center;
+  max-width: 1200px;
+  
+  width: 100%;
+}
+/* .contenedor-menu >div{
+
+  width: 33%;
+}
+
+.menu-links{
+ width: 33%; }*/
+
+/*Ul**/
+.menu ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  align-items: center;
+  align-content: center;
+}
+
+.menu .logo{
+  width: 33%;
+}
+
+.menu .logo img{
+  width: 400px;
+}
+
+.menu a{
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+/* .menu .header-registro{
+  width: 33%;
+
+} */
+/*****Menu Mobile*******************/
+.menu-mobile{
+ display:block
+
+
+}
+
+.menu-mobile .header{
+  display: flex;
+  width: 100%;
+ 
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  align-content: center;
+
+}
+/*****Btn registro*****/
+.menu-mobile .header .header-registro .btn-registro-header,
+.btn-registro-header-desktop{
+  padding: 15px;
+  border: 4px solid var(--color-principal);
+  font-family:'Poppins', sans-serif;
+  color:var(--color-principal);
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 25px;
+
+}
+.menu-mobile .header .header-registro .btn-registro-header:hover,
+.btn-registro-header-desktop:hover
+{
+  color:var(--color-barra-lateral); 
+  background-color: var(--color-principal);
+  
+}
+/*******boton comprar cards**********/
+.btn-comprar{
+  color:var(--color-barra-lateral); 
+  background-color: var(--color-principal);
+  padding: 15px;
+  border:none;
+  font-family:'Poppins', sans-serif;
+ 
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 25px;
+}
+
+.menu-mobile .header.logo{
+  /* flex-grow: 2; */
+  text-align: center;
+}
+.menu-mobile .header .logo img{
+  width: 200px;
+
+}
+
+/***Background-fondo***/
+.background-black{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1;
+}
+.menu-mobile .menu-nav{
+  height: 100vh;
+
+ position:fixed;
+ top: 0;
+
+width: 250px;
+left: -250px;
+ background-color: var(--color-principal);
+ z-index: 1;
+ transition: all 500ms;
+ border-radius:0px 20px 20px 0px;
+
+}
+
+.menu-mobile ul{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  padding: 0;
+}
+.menu-mobile ul li{
+  margin-top: 20px;
+  list-style: none;
+ width: 100%;
+
+}
+.menu-mobile ul li:hover{
+  background-color:rgba(46, 107, 119, 0.5);
+  
+}
+
+.menu-mobile ul li a{
+  padding: 20px 0;
+text-decoration: none;
+  display: block;
+}
+.menu-mobile ul li a:hover{
+  color: var(--color-barra-lateral);
+}
+.menu-mobile a .fa-bars{
+  color:var(--color-principal);
+  font-size: 30px;
+}
+/**Contenedor redes*/
+.container-redes{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+.container-redes a{
+  width: 25px;
+  padding: 0;
+}
+ .container-redes a .fa-brands {
+  font-size: 25px;
+
+ 
+}
+
+.container-redes a .fa-brands:hover{
+  color: var(--color-barra-lateral);
+}
+/***********Cover******************/
+.cover{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 5px;
+ max-width: 1200px;
+}
+
+.cover .text-information-cover{
+  width: 100%;
+
+  text-align: center;
+}
+.cover .text-information-cover h1{
+  font-size: 50px;
+  font-weight: bold;
+  font-family:'Poppins', sans-serif;
+}
+
+.cover .text-information-cover p{
+  font-size: 18px;
+  margin-top: 40px;
+  font-family:'Poppins', sans-serif;
+}
+/*************BTN Submit**************/
+
+.btn-submit{
+  /* background-color: var(--color-principal); */
+  background-color: #fe5859;
+  cursor: pointer;
+  width: 50%;
+ margin: 20px;
+  border: none;
+  border-radius: 20px;
+  height: 50px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+  font-weight: 500;
+ color: white;
+  padding: 1rem;
+}
+/*********Cover img*************/
+.cover-img{
+  
+  width: 90%;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+
+.cover-img img{
+  width: 100%
+
+ /*  max-width: 100%;
+  margin: 0 auto;
+  z-index: 0; */
+}
+
+/*******contenedor-header-cards************/
+.contenedor-recetas .contenedor-header{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1200px;
+}
+ 
+.btn-ver-mas{
+ 
+  cursor: pointer;
+  background-color: var( --color-fondo);
+  width: 80px;
+  border: 3px solid var(--color-principal);
+  border-radius: 25px;
+  height: 15px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; 
+  font-weight:500;
+ color: black;
+ text-decoration: none;
+}
+
+
+
+/*******Cards*******/
+ .contenedor .container-mas-populares{
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: center;
+  margin:20px auto;
+ 
+}
+.container-mas-populares .card{
+  width: 200px;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s;
+  position: relative;
+  cursor: pointer;
+}
+
+.container-mas-populares .card:hover{
+transform: translateY(-15px);
+box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.container-mas-populares .card a{
+  padding: 0;
+}
+
+.container-mas-populares .card img{
+ width: 100%;
+ height: 100%;
+}
+
+
+.blur-card{
+  background-color:rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter:blur(5px) ;
+  position: absolute;
+  width: 100%;
+  height:50%;
+  bottom: 0%; 
+}
+.blur-card .container-info{
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.blur-card .tiempo i,
+.blur-card .persona i{
+  padding: 3px;
+}
+.blur-card .tiempo,
+.blur-card .persona{
+  display: flex;
+  justify-content:center;
+  color: var(--color-negro);
+  margin: 3px;
+}
+/**catering slider**/
+.slider-catering{
+
+  width: 100%;
+  height:400px;
+  border-radius: 25px;
+  margin:  20px auto;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.slider-catering ul{
+  border-radius: 25px;
+  width: 100%;
+}
+/* .slider-catering::before{
+  content: "" ;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5); 
+  top: 0;
+  bottom:0 ;
+  left: 35px;
+  right: 0;
+ width: 90%;
+
+height: 400px;
+z-index: 1;
+} */
+.slider-catering ul{
+ 
+  display: flex;
+  width: 300%;
+  animation:  mover-foto 15s infinite alternate ease-in-out;
+ padding: 0;
+ margin: 0;
+}
+.slider-catering ul li{
+  list-style: none;
+ 
+
+}
+.slider-catering ul li a{
+  padding: 0;
+}
+.slider-catering ul li img
+{
+  border-radius: 25px;
+  width: 100%;
+  
+  
+}
+
+@keyframes mover-foto{
+  0%{
+   margin-left:0%;
+  }
+  30%{
+    margin-left:0%;
+  }
+  35%{
+    margin-left:-100%;
+  }
+  65%{
+    margin-left:-100%;
+  }
+  70%{
+    margin-left:-200%;
+  }
+  100%{
+    margin-left:-200%;
+  }
+  
+}
+.overlay-h2{
+  position: absolute;
+  text-align: center;
+  color: var(--color-barra-lateral);
+  z-index: 1;
+  /* DESKTROP RESPONSIVE */
+  top: 25%;
+  right:20%;
+  font-size: 2rem;
+  /* top:35%;
+  right: 35%; 
+  font-size: 3rem;*/
+}
+/**WPP logo notificacion**/
+.contenedor-wpp{
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+ 
+}
+.contenedor-wpp a{
+  padding: 0;
+}
+.contenedor-wpp img{
+  width: 60px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+/*Contenedor carrito logo*/
+.contenedor-carrito-logo{
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  background-color:var(--color-principal);
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  
+}
+.contenedor-carrito-logo a{
+  padding: 0;
+  
+}
+.contenedor-carrito-logo img{
+  width: 50px;
+  height: 50px;
+
+  cursor: pointer;
+}
+
+
+/*************Contenedor del login entero********************/
+.container-login {
+ 
+  background: url(../img/img1.jpg) no-repeat center top;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.login-box {
+  background-color: var(--color-fondo);
+  color: rgb(0, 0, 0);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+border-radius:20px;
+  padding: 70px 30px;
+}
+
+.login-box .avatar {
+ background-color:var(--color-fondo);
+  border-radius:50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+.login-box .avatar img{
+  width: 100px;
+  height: 100px;
+}
+
+.login-box h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.login-box label {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  display: block;
+}
+
+.login-box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"], .login-box input[type="password"], .login-box input[type="email"], .login-box input[type="lastname"], .login-box input[type="name"] {
+  border: none;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #07404b;
+  font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #07404b;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #116101;
+  color: rgb(255, 255, 255);
+}
+
+.login-box a {
+  text-decoration: none;
+  font-size:12px;
+  line-height: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.login-box a:hover {
+  color: #07404b;
+}
+/**********Marca***************/
+
+.marca{
+  font-family:'Poppins', sans-serif;
+}
+
+.marca h1{
+  text-align: center;
+  margin:20px 0 15px 0;
+  font-weight: 300;
+}
+
+.linea{
+  border-top: 5px solid #07404B;
+  margin-bottom: 40px;
+}
+
+.contenedor-imagenes{
+  display:flex;
+  width: 85%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius:3px;
+}
+
+.contenedor-imagenes .imagen{
+  width: 32%;
+  position: relative;
+  height:250px;
+  margin-bottom:5px;
+  box-shadow: #62868D
+}
+.imagen img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.overlay{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color:#62868D ;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: .5s ease;
+}
+
+.overlay h2{
+  color: #fff;
+  font-weight: 300;
+  font-size:30px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay{
+  height:100%;
+  cursor: pointer;
+}
+
+
+
+
+
+/**Informacion del Chef contenida en un Divisor en movimiento**/
+
+.info{
+  font-family:'Poppins', sans-serif;
+}
+
+.info h1{
+  text-align: center;
+  margin:20px 0 15px 0;
+  font-weight: 300;
+}
+
+.linea{
+  border-top: 5px solid #07404B;
+  margin-bottom: 40px;
+}
+
+.contenedor-img{
+  display:flex;
+  width: 100%;
+  margin: auto;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius:3px;
+}
+
+.contenedor-img .imagen-marca{
+  width: 100%;
+  position: relative;
+  height:200px;
+  margin-bottom:5px;
+  box-shadow: #62868D
+}
+.imagen-marca img{
+  width: 100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.overlay-info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color:#62868D ;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: .5s ease;
+}
+
+.overlay-info h2{
+  color: #fff;
+  font-weight: 300;
+  font-size:30px;
+  position: absolute;
+  left:5%;
+  text-align:left;
+  transform: translate(-50%, -50%);
+}
+
+.imagen-marca:hover .overlay-info{
+  height:100%;
+  cursor: pointer;
+}
+
+/**Tienda**/
+
+.item {
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--color-barra-lateral);
+  width: 90%;
+}
+
+.item-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.item-image {
+  height: 300px;
+  width: 100%;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0px 15px;
+
+}
+
+.item-details > .item-price {
+  margin:10px;
+}
+
+/* Carrito */
+.shopping-cart-items {
+  padding: 20px 0px;
+}
+
+.shopping-cart-header {
+  border-bottom: 1px solid #ccc;
+}
+
+.shopping-cart-image {
+  max-width: 80px;
+  border-radius: 20px;
+}
+
+.shopping-cart-quantity-input {
+  max-width: 45px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  padding: 5px;
+}
+
+.shopping-cart-total {
+  min-height: 96px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**FOOTER*/
+footer{
+  background-image: url(/img/wave.svg);
+  padding: 40px 0;
+  width: 100%;
+  background-size: cover;
+  
+}
+.container-footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 1200px;
+  margin: auto;
+}
+.container-footer > div{
+  width: 50%;
+  align-items: center;
+}
+.container-footer .logo-footer{
+  width: 50%;
+}
+.container-footer .logo-footer  img{
+  width: 100%;
+ 
+}
+
+.container-footer .container-redes-footer{
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+}
+.container-redes-footer a .fa-brands{
+  font-size: 25px;
+
+}
+.copyright{
+  text-align: center;
+  max-width: 1200px;
+}
+
+.copyright p{
+  margin-top: 20px;
+  color: black;
+}
+
+/******Receta*******/
+.container-receta{
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+ margin: auto;
+ max-width: 1200px;
+
+}
+.container-receta img{
+  width:90%;
+  height:500px ;
+  border-radius: 25px;
+  margin: auto;
+ 
+}
+.container-menu-chef {
+  width: 600px;
+}
+
+/**Info receta**/
+.info-receta{
+  
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter:blur(5px) ;
+  width: 100%;
+  max-width: 1200px;
+  border-radius:25px;
+  margin: auto;
+  border:rgba(98, 134, 141, 1) solid 5px ;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter:blur(5px) ;
+   text-align: center;
+  
+}
+.container-datos-receta{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.info-receta .datos{
+  align-items: center;
+  text-align: center;
+  background-color: #62868D;
+
+  border-radius: 25px;
+  width: 90px;
+  height: 70px;
+}
+.ingredientes,
+.procedimiento {
+  max-width: 1200px;
+  text-align: center;
+}
+.ingredientes li,
+.procedimiento li{
+  list-style: none;
+}
+/********Catering y chef*******/
+.contenedor-presupuesto{
+  max-width: 1200px;
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  
+  padding: 2rem;
+  border-radius: 25px;
+  margin: 20px auto;
+  position: relative;
+  background-image: url("../catering/imagenes/catering-fondo.jpg");
+  background-size: cover;
+
+}
+
+/* Filtro oscuro  */
+.contenedor-presupuesto::before,
+.contenedor-chef::before{
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.8);
+  border-radius: 25px;
+}
+
+.contenedor-info-presupuesto,
+.contenedor-info-chef{
+
+position: absolute;
+margin: 20px auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+ 
+}
+.contenedor-info-presupuesto h1,
+.contenedor-info-chef h1{
+  color: white;
+}
+.contenedor-info-presupuesto span,
+.contenedor-info-chef span,
+.form span{
+  color: var(--color-principal);
+}
+.contenedor-info-presupuesto p,
+.contenedor-info-chef p{
+  color: white;
+}
+
+
+.btn-presupuesto,
+.btn-chef{
+  padding: 15px;
+  font-family:'Poppins', sans-serif;
+  background-color: var(--color-principal);
+  color:var(--color-fondo);
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 25px;
+  border: none;
+}
+.btn-presupuesto:hover,
+.btn-chef:hover{
+  background-color: #085160;
+}
+/********CHEF A DOMICILIO*********/
+.contenedor-chef{
+  max-width: 1200px;
+  width: 90%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  
+  padding: 2rem;
+  border-radius: 25px;
+  margin: 20px auto;
+  position: relative;
+  background-image: url("../chef/img/foto2.jpg");
+  background-size: cover;
+}
+.contenedor-presentacion .contenedor-btn{
+  display: flex;
+  gap: 50px;
+   width: 500px;
+   margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+}
+/****Formularios****/
+.form{
+  border-radius: 15px;
+  margin: auto;
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  text-align: center;
+  border: solid 5px black;
+}
+.form .form-seccion{
+  position: relative;
+  color: black;
+  margin: 20px;
+}
+
+  .form .input-form{
+    width: 100%;
+    background: none;
+    color: black;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    margin: 10px;
+  }
+  .form-seccion.fecha,
+  .form-seccion.consulta{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .form .textarea{
+    resize: none;
+  }
+  /******Container recetas*****/
+  .container-menu-chef{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    border: 5px solid var(--color-principal);
+    border-radius: 25px;
+   background-color: var(--color-barra-lateral);
+  }
+  .container-menu-chef>div{
+    width: 50%;
+  }
+
+  .contenedor .menu-chef{
+    color: var(--color-principal);
+  }
+  .container-menu-chef .img-chef img{
+    width: 100%;
+    height:400px;
+    border-radius: 25px;
+    padding: 0;
+    
+  }
+  .img-chef {
+    width: 50%;
+    border-radius: 25px;
+  }
+  .container-menu-chef .datos-chef{
+    width: 50%;
+  }
+  .container-menu-chef .datos-chef p{
+    font-size: 18px;
+    margin-top: 10px;
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+  }
+/**********Responsive-media queries********************/
+@media (max-width:1450px){
+
+}
+@media only screen and  (min-width:1280px){
+  
+  
+}
+@media screen and  (min-width:900px){
+  .menu{
+    display: block;
+  }
+
+  .menu-mobile{
+    display: none;
+ 
+  }
+  .contenedor{
+    max-width: 1200px;
+  }
+  .cover{
+    max-width: 1200px;
+    flex-direction: row;
+    align-items: center;
+  }
+ .text-information-cover{
+  text-align: center;
+ }
+  .container-footer{
+    margin-top: 20px;
+  }
+  .copyright{
+   margin: auto;
+  text-align: center;
+  }
+  .container-receta{
+    flex-direction: row;
+    max-width: 1200px;
+  }
+  .container-receta >div{
+    width: 50%;
+  }
+  .container-receta img{
+    width: 50%;
+    height: 743px;
+    border-radius: 25px 0px 0px 25px;
+  }
+  .container-receta .info-receta{
+    width: 50%;
+    border-radius: 0px 25px 25px 0px;
+    border-style: solid solid solid none;
+  }
+  .overlay-h2{
+  top:35%;
+  right: 35%; 
+  font-size: 3rem;
+  }
+}
